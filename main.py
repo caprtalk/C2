@@ -15,4 +15,5 @@ with open("encodings.pickle", "rb") as f:
 # load the input image
 image = cv2.imread("examples/test1.jpeg")
 # get the 128-d face embeddings for each face in the input image
-encodings = utils.face_encodings(image)
+test1_encoding = utils.face_encodings(image)
+
