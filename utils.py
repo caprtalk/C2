@@ -45,11 +45,11 @@ def face_rects(image):
 
 
 def face_landmarks(image):
-    return [shape_predictor(image, face_rect) for face_rect in face_rects(image)]
+    return np.array([shape_predictor(image, face_rect) for face_rect in face_rects(image)])
 
 
 def face_encodings(image):
-    # compute the facial embeddings for each face
+
     # function returns a 128-d vector that describes the face in an image
     return [np.array(face_encoder.compute_face_descriptor(image, face_landmark))
             for face_landmark in face_landmarks(image)]

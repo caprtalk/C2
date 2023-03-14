@@ -6,7 +6,7 @@ from utils import face_rects
 from utils import face_encodings
 from utils import nb_of_matches
 
-class face_detection_videos:
+class face_detection_active:
     # initialize the video stream
     def __init__(self):
         self.video_capture = cv2.VideoCapture(0)
@@ -37,7 +37,7 @@ class face_detection_videos:
 
 
 
-class face_recognition_videos:
+class face_recognition_active:
     def __init__(self):
         # load the encodings + names dictionary
         with open("encodings.pickle", "rb") as f:
