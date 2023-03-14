@@ -4,7 +4,7 @@ import os
 
 import face_encoding
 import face_recognition_images
-import face_recognition_videos
+import face_recognition_active
 import utils
 
 # load the encodings + names dictionary
