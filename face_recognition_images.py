@@ -11,7 +11,7 @@ def face_recognition_images(image, name_encodings_dict):
         name_encodings_dict = pickle.load(f)
 
     # load the input image
-    image = cv2.imread("examples/ts1.jpeg")
+    image = cv2.imread(f'examples/{image}.jpeg')
     # get the 128-d face embeddings for each face in the input image
     encodings = face_encodings(image)
     # this list will contain the names of each face detected in the image
