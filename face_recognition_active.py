@@ -1,6 +1,6 @@
 import pickle
 import cv2
-import dlib
+import time
 
 from utils import face_rects
 from utils import face_encodings
@@ -84,3 +84,4 @@ class face_recognition_active:
             if cv2.waitKey(1) & 0xFF == ord("q"):
                 break
 
+face_recognition_active().run()
