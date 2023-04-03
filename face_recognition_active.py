@@ -74,14 +74,12 @@ class face_recognition_active:
                 names.append(name)
             for rect, name in zip(face_rects(rgb), names):
                 x1, y1, x2, y2 = rect.left(), rect.top(), rect.right(), rect.bottom()
-                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (250, 180, 0), 2)
 
                 # draw the predicted name on the rectangle
                 y = y1 - 15 if y1 - 15 > 15 else y1 + 15
-                cv2.putText(frame, name, (x1, y), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
+                cv2.putText(frame, name, (x1, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (250, 180, 0), 2)
             # show the output frame
             cv2.imshow("frame", frame)
             if cv2.waitKey(1) & 0xFF == ord("q"):
                 break
-
-face_recognition_active().run()

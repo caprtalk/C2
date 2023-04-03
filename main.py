@@ -12,6 +12,11 @@ import utils
 
 def main():
     option = input("1. Face detection active\n2. Face recognition active\n3. Face recognition images\n4. Process Dataset\n5. Face recognition images with input\n")
+
+    if option == '1':
+        face_recognition_active.face_detection_active.run
+    if option == '2':
+        face_recognition_active.face_recognition_active.run
     if option == '3':
         image = input("image name: ")
         face_recognition_images.face_recognition_images(image, 'encodings.pickle')
